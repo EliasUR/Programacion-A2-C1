@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1652050117 source:c:\users\elias\documents\programacionconc\desofuscar\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
