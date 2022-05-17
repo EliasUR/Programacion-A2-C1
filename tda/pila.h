@@ -27,4 +27,6 @@ int pilaVacia (const tPila *p);
 void vaciarPila(tPila *p);
 int sacarDePila(tPila *p, void *d, unsigned cantBytes);
 
+void mostrarPilaInt(tPila *p);
+
 #endif // PILA_H_INCLUDED

@@ -1,0 +1,16 @@
+movimientos archivo texto
+
+cuenta -> numeroDeCuenta(5 digitos)/numeroDeSucursal(alfanumerico)
+fecha -> año/mes/dia
+hora -> hh:mm:ss
+mov -> (deposito/extraccion) ->chr
+monto -> 10/2
+
+ej : 12345/12 2020/5/17 12:24:11 (D) 1231231212/22
+ 
+clientes que movieron mas de 10 millones.bin
+clientes que movieron menos de 10 millones.bin
+
+- leer todos los movimientos por clientes y sumarlos
+- guardar solo el cliente sin sucursal
+- guardar el movimiento mas reciente

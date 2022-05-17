@@ -31,6 +31,16 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="OrdenAsc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SumarNumerosGrandes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cola.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cola.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
