@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1653267086 source:c:\users\elias\documents\programacionconc\movimientos\main.c
+	"main.h"
+
+1652799370 source:c:\users\elias\documents\programacionconc\movimientos\coladinamica.c
+	"cola.h"
+
+1653257671 c:\users\elias\documents\programacionconc\movimientos\cola.h
+	<stdlib.h>
+	<string.h>
+	"macros.h"
+
+1653054579 c:\users\elias\documents\programacionconc\movimientos\macros.h
+
+1653264015 c:\users\elias\documents\programacionconc\movimientos\main.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cola.h"
+
