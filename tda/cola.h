@@ -3,7 +3,11 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include "macros.h"
 
+#define TAM_COLA 25
+
+///DINAMICA
 typedef struct ColaNodo{
     void *info;
     unsigned tam;
@@ -15,12 +19,20 @@ typedef struct{
     tColaNodo *ultimo;
 }tCola;
 
-void crearCola(tCola *p);
-int colaLlena(const tCola *p, unsigned cantBytes);
-int ponerEnCola (tCola *p, const void *d, unsigned cantBytes);
-int verPrimero(const tCola *p, void *d, unsigned cantBytes);
-int colaVacia (const tCola *p);
-void vaciarCola(tCola *p);
-int sacarDeCola(tCola *p, void *d, unsigned cantBytes);
+///ESTATICA
+//typedef struct{
+//    unsigned primero;
+//    unsigned ultimo;
+//    int tamDisponible;
+//    char info[TAM_COLA];
+//}tCola;
+
+void crearCola(tCola *c);
+int colaLlena(const tCola *c, unsigned cantBytes);
+int ponerEnCola (tCola *c, const void *d, unsigned cantBytes);
+int verPrimero(const tCola *c, void *d, unsigned cantBytes);
+int colaVacia (const tCola *c);
+void vaciarCola(tCola *c);
+int sacarDeCola(tCola *c, void *d, unsigned cantBytes);
 
 #endif // COLA_H_INCLUDED

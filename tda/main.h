@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "pila.h"
+#include "cola.h"
+
 void ejSumarNumerosGrandes();
 
 #endif // MAIN_H_INCLUDED

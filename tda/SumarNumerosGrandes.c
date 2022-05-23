@@ -1,7 +1,7 @@
 #include "main.h"
 
 int cargarPilaConArchivo(tPila *p, char *fileName);
-int sumaConCarry(int n1, int n2, int carry, int *result);
+char sumaConCarry(char n1, char n2, char carry, char *result);
 void sumarPilas(tPila *pN1, tPila *pN2, tPila *pResult);
 int cagarArchivoConPila(tPila *p, char *fileName);
 
@@ -30,16 +30,18 @@ void ejSumarNumerosGrandes()
 //    mostrarPilaInt(&pResult);
 }
 int cargarPilaConArchivo(tPila *p, char *fileName){
-    int num;
+    char num;
     FILE *arch = fopen(fileName, "rt");
     if(!arch){
         printf("No se pudo cargar el archivo\n");
         exit(-1);
     }
-    num = fgetc(arch) - '0';
-    while(!feof(arch)){
-        ponerEnPila(p, &num, sizeof(int));
-        num = fgetc(arch) - '0';
+
+    while((num = fgetc(arch)) != EOF){
+        if(num != '\0' && num != '\n'){
+            num = num - '0';
+            ponerEnPila(p, &num, sizeof(char));
+        }
     }
     fclose(arch);
     return 1;
@@ -52,44 +54,43 @@ int cagarArchivoConPila(tPila *p, char *fileName)
         return 0;
     }
     char n;
-    sacarDePila(p, &n, sizeof(int));
-    n += '0';
-    while(!pilaVacia(p)){
-        fputc(n, arch);
-        sacarDePila(p, &n, sizeof(int));
+    do{
+        sacarDePila(p, &n, sizeof(char));
         n += '0';
+        fputc(n, arch);
     }
+    while(!pilaVacia(p));
     fclose(arch);
     return 1;
 }
 void sumarPilas(tPila *pN1, tPila *pN2, tPila *pResult)
 {
-    int n1, n2, carry = 0, result;
+    char n1, n2, carry = 0, result;
     while(!pilaVacia(pN1) && !pilaVacia(pN2)){
-        sacarDePila(pN1, &n1, sizeof(int));
-        sacarDePila(pN2, &n2, sizeof(int));
+        sacarDePila(pN1, &n1, sizeof(char));
+        sacarDePila(pN2, &n2, sizeof(char));
         carry = sumaConCarry(n1, n2, carry, &result);
-        ponerEnPila(pResult, &result, sizeof(int));
+        ponerEnPila(pResult, &result, sizeof(char));
     }
     while(!pilaVacia(pN1)){
-        sacarDePila(pN1, &n1, sizeof(int));
+        sacarDePila(pN1, &n1, sizeof(char));
         carry = sumaConCarry(n1, 0, carry, &result);
-        ponerEnPila(pResult, &result, sizeof(int));
+        ponerEnPila(pResult, &result, sizeof(char));
     }
     while(!pilaVacia(pN2)){
-        sacarDePila(pN2, &n2, sizeof(int));
+        sacarDePila(pN2, &n2, sizeof(char));
         carry = sumaConCarry(n2, 0, carry, &result);
-        ponerEnPila(pResult, &result, sizeof(int));
+        ponerEnPila(pResult, &result, sizeof(char));
     }
     if(carry > 0){
-        ponerEnPila(pResult, &carry, sizeof(int));
+        ponerEnPila(pResult, &carry, sizeof(char));
     }
 }
 
-int sumaConCarry(int n1, int n2, int carry, int *result){
+char sumaConCarry(char n1, char n2, char carry, char *result){
     *result = n1 + n2 + carry;
     carry = 0;
-    while(*result >= 10){
+    if(*result >= 10){
         *result -= 10;
         carry++;
     }

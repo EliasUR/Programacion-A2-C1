@@ -37,10 +37,11 @@
 		<Unit filename="SumarNumerosGrandes.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="cola.c">
+		<Unit filename="cola.h" />
+		<Unit filename="colaDinamica.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="cola.h" />
+		<Unit filename="macros.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
