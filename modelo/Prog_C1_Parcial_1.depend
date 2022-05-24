@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1653359102 source:c:\users\laboratorios\desktop\prog_c1_parcial_1_entregable\main.c
+	"main.h"
+
+1653359102 c:\users\laboratorios\desktop\prog_c1_parcial_1_entregable\main.h
+	<stdio.h>
+	"funciones.h"
+	"que_hice.h"
+	<stdlib.h>
+	<string.h>
+
+1653359102 c:\users\laboratorios\desktop\prog_c1_parcial_1_entregable\funciones.h
+	<stdio.h>
+	"que_hice.h"
+	"tda_definiciones.h"
+
+1653364012 c:\users\laboratorios\desktop\prog_c1_parcial_1_entregable\que_hice.h
+
+1653359102 c:\users\laboratorios\desktop\prog_c1_parcial_1_entregable\tda_definiciones.h
+
+1653364233 source:c:\users\laboratorios\desktop\prog_c1_parcial_1_entregable\funciones.c
+	<string.h>
+	<stdlib.h>
+	"funciones.h"
+
