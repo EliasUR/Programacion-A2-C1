@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include "pila.h"
 #include "cola.h"
-
+#include "lista.h"
 void ejSumarNumerosGrandes();
 
 #endif // MAIN_H_INCLUDED

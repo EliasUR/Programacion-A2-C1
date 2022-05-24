@@ -3,20 +3,16 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include "nodo.h"
 #include "macros.h"
 
 #define TAM_COLA 25
 
 ///DINAMICA
-typedef struct ColaNodo{
-    void *info;
-    unsigned tam;
-    struct ColaNodo *sNodo;
-}tColaNodo;
 
 typedef struct{
-    tColaNodo *primero;
-    tColaNodo *ultimo;
+    tNodo *primero;
+    tNodo *ultimo;
 }tCola;
 
 ///ESTATICA

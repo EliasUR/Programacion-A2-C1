@@ -1,0 +1,10 @@
+tLista li -> *tNodo
+tLista *li -> **tNodo
+tNodo *pl = *li -> pl = *tNodo
+*pl -> tNodo
+*pl->sig 
+.....................
+a>b + | a<b - | a=b 0
+..............
+a -> b -> d
+     c

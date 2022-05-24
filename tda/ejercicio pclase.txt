@@ -1,0 +1,7 @@
+struct producto
+clave 
+cant
+precio
+----------------------
+ordenar por clave
+si son iguales sumar cantidades

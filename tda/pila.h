@@ -2,6 +2,7 @@
 #define PILA_H_INCLUDED
 
 #include <string.h>
+#include "nodo.h"
 #define TAM_PILA 23
 
 ///estatica
@@ -11,11 +12,6 @@
 //}tPila;
 
 ///dinamica
-typedef struct Nodo{
-    void *info;
-    unsigned tam;
-    struct Nodo *sNodo;
-}tNodo;
 
 typedef tNodo *tPila;
 

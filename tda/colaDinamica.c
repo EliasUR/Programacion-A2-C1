@@ -10,7 +10,7 @@ int colaVacia (const tCola *c)
     return c->primero == NULL;
 }
 int ponerEnCola (tCola *c, const void *d, unsigned cantBytes){
-    tColaNodo *n = (tColaNodo *)malloc(sizeof(tColaNodo));
+    tNodo *n = (tNodo *)malloc(sizeof(tNodo));
     if(!n){
         return 0;
     }
@@ -35,7 +35,7 @@ int sacarDeCola(tCola *c, void *d, unsigned cantBytes){
     if(c->primero == NULL)
         return 0;
 
-    tColaNodo *elim = c->primero;
+    tNodo *elim = c->primero;
     unsigned minTam = cantBytes<elim->tam? cantBytes : elim->tam;
     memcpy(d, elim->info, minTam);
 
@@ -59,7 +59,7 @@ int verPrimero(const tCola *c, void *d, unsigned cantBytes)
 }
 void vaciarCola(tCola *c)
 {
-        tColaNodo *elim = c->primero;
+        tNodo *elim = c->primero;
     while(c->primero != NULL)
     {
         c->primero = elim->sNodo;
@@ -71,7 +71,7 @@ void vaciarCola(tCola *c)
 }
 int colaLlena(const tCola *c, unsigned cantBytes)
 {
-    tColaNodo *n = (tColaNodo *)malloc(sizeof(tColaNodo));
+    tNodo *n = (tNodo *)malloc(sizeof(tNodo));
     if(!n){
         return 1;
     }

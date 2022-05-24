@@ -1,0 +1,7 @@
+validar etiquetas apertura y cierre
+crear archivo corregido (etiquetas apertura y cierre)
+
+pila
+meter cuando abre
+sacar cuando cierra
+si la siguiente etiqueta de cierre es distinta a la ultima de apertura hay un error
