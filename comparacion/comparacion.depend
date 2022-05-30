@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1651353640 source:c:\users\elias\documents\programacionconc\comparacion\funciones.c
+	"funciones.h"
+
+1651351324 c:\users\elias\documents\programacionconc\comparacion\funciones.h
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<string.h>
+
+1651353683 source:c:\users\elias\documents\programacionconc\comparacion\main.c
+	"funciones.h"
+

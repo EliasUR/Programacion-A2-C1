@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1653945178 source:c:\users\elias\documents\programacionconc\modeloparcialc\main.c
+	"cola.h"
+
+1653945524 c:\users\elias\documents\programacionconc\modeloparcialc\cola.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

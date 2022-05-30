@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1649127350 source:c:\users\elias\documents\programacionconc\punteros\main.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1649126907 source:c:\users\elias\documents\programacionconc\punteros\functions.c
+	"functions.h"
+
+1649126455 c:\users\elias\documents\programacionconc\punteros\functions.h
+
+1649126968 c:\users\elias\documents\programacionconc\punteros\header.h
+	<string.h>
+	"functions.h"
+
