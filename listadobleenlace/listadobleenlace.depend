@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1654614009 source:c:\users\laboratorios\downloads\programacion-a2-c1-main\listadobleenlace\lista.c
+	"lista.h"
+
+1654612582 c:\users\laboratorios\downloads\programacion-a2-c1-main\listadobleenlace\lista.h
+	<stdlib.h>
+	<string.h>
+
+1654612614 source:c:\users\laboratorios\downloads\programacion-a2-c1-main\listadobleenlace\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+

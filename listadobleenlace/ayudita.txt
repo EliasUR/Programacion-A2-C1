@@ -1,0 +1,40 @@
+- insertar en orden
+- mostrar de izquierda a derecha
+- mostrar de derecha a izquierda
+- eliminar una clave(elimina todos los duplicados)
+
+3 punteros auxiliares
+actual -> puntero que indica posicion
+ant y sig -> punteros que indican ant y sig de donde se quiere insertar/eliminar
+
+cada nodo con sus punteros ant y sig propios
+
+si hay lista 
+while ant y comp
+	auxant se mueve
+
+while sig y comp
+	auxsig se mueve
+
+acomodar los aux
+
+si no hay lista los aux = null
+
+reservar memoria
+no anda chau
+si anda nue-ant = auxant
+	nue_sig = auxsig
+si se puede se engancha el nodo
+	auxant->sig = nue
+	auxsig->ant = nue
+pdelista apunta a nue
+
+l = 9  n = 5
+1,3,6,7,8,9
+        	      
+    a
+...........................
+- acumular
+- añadir desordenado
+- eliminar duplicados dejando 1 nodo que acumule
+(clave producto | stock)
