@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1649420281 source:c:\users\elias\documents\programacionconc\vectores\funciones.c
+	"funciones.h"
+
+1649417585 c:\users\elias\documents\programacionconc\vectores\funciones.h
+
+1649419841 source:c:\users\elias\documents\programacionconc\vectores\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+

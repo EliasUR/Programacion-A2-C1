@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1653961416 source:c:\users\elias\documents\programacionconc\normalizar\main.c
+	<stdio.h>
+	<stdlib.h>
+

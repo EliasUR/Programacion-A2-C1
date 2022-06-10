@@ -1,0 +1,21 @@
+actualizar stock 
+
+atender cliente <-> alcanza el stock de el producto para cumplir todos los pedidos del cliente
+
+armar cola con clientes no atendidos
+......................
+productos
+cod prod (cadena 10 formato xxx-dddddd  xxx tipo y dddddd id prod = coincide con el 
+nro de registro   alm-000001)
+descripción ( cadena 25)
+pu (flotante)
+stock (entero)
+........................
+clientes
+d/m/a codCliente [codProd] cantPedida
+
+
+   anita. laVa la tina!\0
+anita. laVa la tina!\0   
+
+anita. laVa la tina!\0 

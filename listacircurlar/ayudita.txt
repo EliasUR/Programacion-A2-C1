@@ -1,0 +1,19 @@
+pila circular
+
+se mete en la segunda y se saca de la segunda
+
+....................................
+
+cola circular
+
+cola -> a->a
+cola -> b->a->b
+cola -> d->a->b->c->d
+
+1-2-3-4-5
+
+t-cola apunta al ultimo
+el ultimo apunta al primero
+se saca del segundo apuntado por el primero
+se ingresa entre el primero y el segundo
+se cambia t-cola al segundo

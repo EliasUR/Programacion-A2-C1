@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1651201360 source:c:\users\elias\documents\programacionconc\archivos\funciones.c
+	"funciones.h"
+
+1651199663 c:\users\elias\documents\programacionconc\archivos\funciones.h
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<string.h>
+
+1651201302 source:c:\users\elias\documents\programacionconc\archivos\main.c
+	"funciones.h"
+
