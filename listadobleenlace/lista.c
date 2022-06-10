@@ -94,5 +94,115 @@ void eliminarRegDeLista(tLista *lista, const void *reg, int (* comparar)(const v
     }
 }
 
-void acumularDeLista(tLista *lista, void *dato, int (* comparar)(const void *a, const void *b), void (* acumular)(void *acum, const void *b)){
+void eliminarRegDeListaOrdenada(tLista *lista, const void *reg, int (* comparar)(const void *a, const void *b))
+{
+    tNodo *elim, *actual = *lista;
+    int seguirBorrando = 1;
+    while(actual->ant != NULL && comparar(reg, actual->info) < 0){//si el dato es menor a la posicion retrocede el actual hasta encontrar >=
+        actual = actual->ant;
+    }
+    while(seguirBorrando){
+        if(actual->ant != NULL && comparar(reg, elim->info) == 0){//si la pos es igual al registro borra y va al anterior
+            elim = actual;
+            actual = actual->ant;
+            elim->ant->sig = elim->sig;
+            elim->sig->ant = elim->ant;
+            free(elim->info);
+            free(elim);
+        }else{
+            if(actual->sig != NULL && comparar(reg, actual->info) > 0){//si la info es mayor al actual->info ir al siguiente
+                actual = actual->sig;
+            }
+            else{
+                seguirBorrando = 0;//salida
+            }
+        }
+    }
 }
+
+void acumularDeLista(tLista *lista, void *reg,
+                     int (* comparar)(const void *a, const void *b), void (* acumular)(void *acum, const void *b)){
+    tNodo *aux = *lista;
+    while(aux->ant != NULL){
+        aux = aux->ant;
+    }
+    while(aux->sig != NULL){
+        if(comparar(reg, aux->info) == 0){
+            acumular(reg, aux->info);
+        }
+        aux = aux->sig;
+    }
+    if(comparar(reg, aux->info) == 0){
+        acumular(reg, aux->info);
+    }
+}
+
+void acumularYborrarDeListaOrdenada(tLista *lista, const void *reg, int (* comparar)(const void *a, const void *b),
+                                      void (* acumular)(void *acum, const void *b))
+{
+    tNodo *elim, *acum = *lista;
+    int seguirBorrando = 1, direc = 0;
+    if(comparar(reg, acum->info) < 0){
+        while(comparar(reg, acum->info) < 0){//si el dato es menor a la posicion retrocede el actual hasta encontrar >=
+            acum = acum->ant;
+            direc--;
+        }
+    }else{
+        if(comparar(reg, acum->info) > 0){
+            while(comparar(reg, acum->info) > 0){//si el dato es menor a la posicion retrocede el actual hasta encontrar >=
+                acum = acum->sig;
+                direc++;
+            }
+        }
+    }
+    if(direc>0){
+        elim = acum->sig;
+    }
+    else{
+        elim = acum->ant;
+    }
+    while(seguirBorrando){
+        if(comparar(reg, elim->info) == 0 && elim != acum){//si la pos es igual al registro borra y va al anterior
+            acumular(acum->info, elim->info);
+            printf("Acum: %d, elim: %d | ", acum, elim);
+            elim->ant->sig = elim->sig;
+            elim->sig->ant = elim->ant;
+            free(elim->info);
+            free(elim);
+            if(direc>0){
+                if(acum->sig == NULL){
+                    elim = acum;
+                }
+                else{
+                    elim = acum->sig;
+                }
+            }else{
+
+                if(acum->ant == NULL){
+                    elim = acum;
+                }
+                else{
+                    elim = acum->ant;
+                }
+            }
+                printf("Aca(%d) - ", direc);
+            printf("Acum: %d, elim: %d | ", acum, elim);
+        }else{
+            printf("Acum: %d, elim: %d | ", acum, elim);
+            if(direc != 0){
+                seguirBorrando = 0;
+            }
+            else{
+                if(acum->sig != NULL){
+                    elim = acum->sig;
+                    direc++;
+                }
+                else{
+                    seguirBorrando = 0;
+                }
+            }
+        }
+    }
+}
+
+

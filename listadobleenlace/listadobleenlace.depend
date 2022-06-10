@@ -11,3 +11,15 @@
 	<stdlib.h>
 	"lista.h"
 
+1654875268 source:c:\users\elias\documents\programacionconc\listadobleenlace\lista.c
+	"lista.h"
+
+1654866596 c:\users\elias\documents\programacionconc\listadobleenlace\lista.h
+	<stdlib.h>
+	<string.h>
+
+1654867717 source:c:\users\elias\documents\programacionconc\listadobleenlace\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+

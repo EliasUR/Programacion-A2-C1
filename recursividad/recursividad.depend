@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1654872675 source:c:\users\elias\documents\programacionconc\recursividad\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1654873922 c:\users\elias\documents\programacionconc\recursividad\funciones.h
+
+1654873922 source:c:\users\elias\documents\programacionconc\recursividad\funciones.c
+	"funciones.h"
+

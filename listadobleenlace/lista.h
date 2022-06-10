@@ -18,4 +18,11 @@ int insertarEnListaOrdenada(tLista *lista, void *info, unsigned cantBytes, int (
 void mostrarListaAsc(tLista *lista, void (* mostrar)(const void *info));
 void mostrarListaDesc(tLista *lista, void (* mostrar)(const void *info));
 void eliminarRegDeLista(tLista *lista, const void *reg, int (* comparar)(const void *a, const void *b));
+void acumularDeLista(tLista *lista, void *reg,
+                      int (* comparar)(const void *a, const void *b), void (* acumular)(void *acum, const void *b));
+
+
+void acumularYborrarDeListaOrdenada(tLista *lista, const void *reg,
+                                      int (* comparar)(const void *a, const void *b),
+                                        void (* acumular)(void *acum, const void *b));
 #endif // LISTA_H_INCLUDED
