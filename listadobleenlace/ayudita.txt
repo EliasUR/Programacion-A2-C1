@@ -37,4 +37,8 @@ l = 9  n = 5
 - acumular
 - añadir desordenado
 - eliminar duplicados dejando 1 nodo que acumule
+
+1->2->2->2->2->2->3
+                  p
+
 (clave producto | stock)
