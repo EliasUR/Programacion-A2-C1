@@ -1,0 +1,9 @@
+1234/10 = 123/10 = 12/10 = 1/10 = 0
+r4        r3       r2      r1         
+234/10 = 23/10 = 2
+
+aRriba la Birra 
+15
+
+busqueda binaria -> bsearch
+   

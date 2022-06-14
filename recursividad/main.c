@@ -4,9 +4,9 @@
 
 int main()
 {
-    char *frase = "hola pepe";
-    printf("%d\n", exponencial(2, 4));
-    printf("%d\n", cantChar(frase));
-
+    char *frase = "aRriba la Birra";
+//    printf("%d\n", exponencial(2, 4));
+//    printf("%d\n", cantChar(frase));
+    printf("%s -> %s", frase, ejercicio13(frase, 1)?"ES PALINDROMO":"NO ES PALINDROMO");
     return 0;
 }
