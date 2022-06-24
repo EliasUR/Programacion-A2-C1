@@ -42,15 +42,9 @@ void mostrarArbolInOrden(tArbol *arbol, void (*mostrar)(const void *info))
         return;
     }
 
-    if((*arbol)->menor != NULL)
-    {
-        mostrarArbolInOrden(&(*arbol)->menor, mostrar);
-    }
-        mostrar((*arbol)->info);
-    if((*arbol)->mayor != NULL)
-    {
-        mostrarArbolInOrden(&(*arbol)->mayor, mostrar);
-    }
+    mostrarArbolInOrden(&(*arbol)->menor, mostrar);
+    mostrar((*arbol)->info);
+    mostrarArbolInOrden(&(*arbol)->mayor, mostrar);
 }
 
 void mostrarArbolPreOrden(tArbol *arbol,  void (*mostrar)(const void *info))
@@ -60,12 +54,61 @@ void mostrarArbolPreOrden(tArbol *arbol,  void (*mostrar)(const void *info))
     }
 
     mostrar((*arbol)->info);
-    if((*arbol)->menor != NULL)
-    {
-        mostrarArbolInOrden(&(*arbol)->menor, mostrar);
+    mostrarArbolPreOrden(&(*arbol)->menor, mostrar);
+    mostrarArbolPreOrden(&(*arbol)->mayor, mostrar);
+}
+void mostrarArbolPostOrden(tArbol *arbol,  void (*mostrar)(const void *info))
+{
+    if(*arbol == NULL){
+        return;
     }
-    if((*arbol)->mayor != NULL)
-    {
-        mostrarArbolInOrden(&(*arbol)->mayor, mostrar);
+
+    mostrarArbolPostOrden(&(*arbol)->menor, mostrar);
+    mostrarArbolPostOrden(&(*arbol)->mayor, mostrar);
+    mostrar((*arbol)->info);
+}
+
+int eliminarNodo(tArbol *arbol, void *dato, int (*comparar)(const void *a, const void *b))
+{
+    tNodo *elim = buscarNodo(arbol, dato, comparar);
+
+    if(elim == NULL)
+        return 0;
+
+    printf("\nmax: %d", ramaMax(&elim));
+
+    return 1;
+}
+
+tNodo *buscarNodo(tArbol *arbol, void *dato, int (*comparar)(const void *a, const void *b))
+{
+    if(comparar(dato, (*arbol)->info) == 0)
+        return *arbol;
+
+    if((*arbol)->menor != NULL && comparar(dato, (*arbol)->info) < 0)
+        return buscarNodo(&(*arbol)->menor, dato, comparar);
+
+
+    if((*arbol)->mayor != NULL && comparar(dato, (*arbol)->info) > 0)
+        return buscarNodo(&(*arbol)->mayor, dato, comparar);
+
+    if((*arbol)->mayor == NULL && (*arbol)->menor == NULL)
+        return NULL;
+}
+
+int ramaMax(tArbol *arbol)
+{
+    int nivelIzquierda = 0, nivelDerecha = 0;
+    if((*arbol)->menor != NULL){
+        nivelIzquierda = ramaMax(&(*arbol)->menor);
+        nivelIzquierda--;
     }
+
+    if((*arbol)->mayor != NULL){
+        nivelDerecha = ramaMax(&(*arbol)->mayor);
+        nivelDerecha++;
+    }
+
+    return nivelDerecha + nivelIzquierda;
+
 }

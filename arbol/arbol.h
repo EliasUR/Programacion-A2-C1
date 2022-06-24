@@ -18,10 +18,15 @@ void crearArbol(tArbol *arbol);
 int nuevaRama(tArbol *arbol, const void *info, unsigned cantBytes, int (* comparar)(const void *a, const void *b));
 void mostrarArbolInOrden(tArbol *arbol,  void (*mostrar)(const void *info));
 void mostrarArbolPreOrden(tArbol *arbol,  void (*mostrar)(const void *info));
+void mostrarArbolPostOrden(tArbol *arbol,  void (*mostrar)(const void *info));
+int ramaMax(tArbol *arbol);
+tNodo *buscarNodo(tArbol *arbol, void *dato, int (*comparar)(const void *a, const void *b));
+int eliminarNodo(tArbol *arbol, void *dato, int (*comparar)(const void *a, const void *b));
+
 //TO DO RECURSIVO
 //INORDEN v
-//PREORDEN
-//POSTORDEN
+//PREORDEN v
+//POSTORDEN v
 //volver del postorden al inorden
 //algun orden sin recursividad
 //de un arbol incompleto inorden 10-25-50-75-100-120-130 crear un arbol completo
@@ -38,6 +43,6 @@ void mostrarArbolPreOrden(tArbol *arbol,  void (*mostrar)(const void *info));
 //buscar clave en un nodo
 //ver nodos hasta un nvel
 //ver nodos desde un nvel
-//ver nodos de un nvel
-
+//ver nodos dedd un nvel
+// calcular promedio de numeros del arbol
 #endif // ARBOL_H_INCLUDED

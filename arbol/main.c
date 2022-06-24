@@ -9,14 +9,17 @@ void nuevasRamas(tArbol *arbol, int *info, int max);
 int main()
 {
     tArbol arbol;
-    int num[10] = {100,50,120,75,25,135};
+    int buscar = 12, num[] = {100,50,150,75,25,125,175,10,30,60,55,70,110,130,160,200};
     crearArbol(&arbol);
-    nuevasRamas(&arbol, num, 6);
+    nuevasRamas(&arbol, num, 16);
     printf("\nrecorrido inorden\n...............\n");
     mostrarArbolInOrden(&arbol, mostrarInt);
     printf("\nrecorrido preorden\n...............\n");
     mostrarArbolPreOrden(&arbol, mostrarInt);
-//    printf("Hello world!\n");
+    printf("\nrecorrido postorden\n...............\n");
+    mostrarArbolPostOrden(&arbol, mostrarInt);
+    printf("\neliminar\n...............\n");
+    eliminarNodo(&arbol, &buscar, compararInt);
     return 0;
 }
 

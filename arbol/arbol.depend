@@ -12,3 +12,16 @@
 	<stdlib.h>
 	"arbol.h"
 
+1656081183 source:c:\users\elias\documents\programacionconc\arbol\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arbol.h"
+
+1656076744 c:\users\elias\documents\programacionconc\arbol\arbol.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1656081088 source:c:\users\elias\documents\programacionconc\arbol\arbol.c
+	"arbol.h"
+
