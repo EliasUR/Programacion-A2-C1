@@ -1,7 +1,7 @@
 eliminar nodo de un arbol
 
-1. buscar
-2. liberar
+1. buscar anterior
+2. liberar solo info dejar punteros
 3. chequeo hios
 3a. si no tiene hijos borro
 3b. tratar de eliminar desbalanceando el arbol lo menos posible
@@ -9,4 +9,7 @@ eliminar nodo de un arbol
 si es izquierda buscar el nodo mas alto de la izquierda
 si es derecha buscar el nodo mas bajo del derecho
 4.asigno el elegido como raiz
-5.asigno los hios de tal nodo a su padre
+4a. copio info en raiz
+4b. guardo el puntero
+4c. libero info
+5.asigno los hijos de tal nodo a su padre
