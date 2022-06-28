@@ -22,6 +22,16 @@ void mostrarArbolPostOrden(tArbol *arbol,  void (*mostrar)(const void *info));
 int ramaMax(tArbol *arbol);
 tNodo *buscarNodo(tArbol *arbol, void *dato, int (*comparar)(const void *a, const void *b));
 int eliminarNodo(tArbol *arbol, void *dato, int (*comparar)(const void *a, const void *b));
+float promedioArbolInt(tArbol *arbol);
+
+//TO DO SI O SI
+//eliminar nodo
+//contar nodos
+//altura del arbol
+//sumar claves del arbol
+//leer archivo en arbol
+//balancear
+//mostrar arbol
 
 //TO DO RECURSIVO
 //INORDEN v

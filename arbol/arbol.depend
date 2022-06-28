@@ -1,16 +1,17 @@
 # depslib dependency file v1.0
-1655823183 source:c:\users\laboratorios\downloads\programacion-a2-c1-main\arbol\arbol.c
+1656420479 source:c:\users\laboratorios\downloads\programacion-a2-c1-main\arbol\arbol.c
 	"arbol.h"
 
-1655823183 c:\users\laboratorios\downloads\programacion-a2-c1-main\arbol\arbol.h
+1656424707 c:\users\laboratorios\downloads\programacion-a2-c1-main\arbol\arbol.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1655822831 source:c:\users\laboratorios\downloads\programacion-a2-c1-main\arbol\main.c
+1656425025 source:c:\users\laboratorios\downloads\programacion-a2-c1-main\arbol\main.c
 	<stdio.h>
 	<stdlib.h>
 	"arbol.h"
+	"busquedabinaria.h"
 
 1656081183 source:c:\users\elias\documents\programacionconc\arbol\main.c
 	<stdio.h>
@@ -23,5 +24,10 @@
 	<string.h>
 
 1656081088 source:c:\users\elias\documents\programacionconc\arbol\arbol.c
+	"arbol.h"
+
+1656424865 source:c:\users\laboratorios\downloads\programacion-a2-c1-main\arbol\busquedabinaria.c
+
+1656425025 c:\users\laboratorios\downloads\programacion-a2-c1-main\arbol\busquedabinaria.h
 	"arbol.h"
 

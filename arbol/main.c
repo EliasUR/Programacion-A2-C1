@@ -1,25 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "arbol.h"
-
+#include "busquedabinaria.h"
 void mostrarInt(const void *info);
 int compararInt(const void *a, const void *b);
 void nuevasRamas(tArbol *arbol, int *info, int max);
+void probandoArbol();
 
 int main()
 {
-    tArbol arbol;
-    int buscar = 12, num[] = {100,50,150,75,25,125,175,10,30,60,55,70,110,130,160,200};
-    crearArbol(&arbol);
-    nuevasRamas(&arbol, num, 16);
-    printf("\nrecorrido inorden\n...............\n");
-    mostrarArbolInOrden(&arbol, mostrarInt);
-    printf("\nrecorrido preorden\n...............\n");
-    mostrarArbolPreOrden(&arbol, mostrarInt);
-    printf("\nrecorrido postorden\n...............\n");
-    mostrarArbolPostOrden(&arbol, mostrarInt);
-    printf("\neliminar\n...............\n");
-    eliminarNodo(&arbol, &buscar, compararInt);
+
     return 0;
 }
 
@@ -37,4 +27,23 @@ int compararInt(const void *a, const void *b)
 
 void mostrarInt(const void *info){
     printf("|%d|", *(int *)info);
+}
+
+void probandoArbol(){
+    tArbol arbol;
+    int buscar = 12,
+        num[] = {100,50,150,75,25,125,175,10,30,60,55,70,110,130,160,200},
+        num2[] = {5,3,10,2,4,1,8,20,25,35};
+    crearArbol(&arbol);
+    nuevasRamas(&arbol, num2, 10);
+    printf("\nrecorrido inorden\n...............\n");
+    mostrarArbolInOrden(&arbol, mostrarInt);
+    printf("\nrecorrido preorden\n...............\n");
+    mostrarArbolPreOrden(&arbol, mostrarInt);
+    printf("\nrecorrido postorden\n...............\n");
+    mostrarArbolPostOrden(&arbol, mostrarInt);
+//    printf("\neliminar\n...............\n");
+//    eliminarNodo(&arbol, &buscar, compararInt);
+    printf("\nPromedio:%f\n", promedioArbolInt(&arbol));
+
 }

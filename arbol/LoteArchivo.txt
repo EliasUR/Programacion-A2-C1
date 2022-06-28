@@ -1,0 +1,37 @@
+typedef struct
+{
+    int claveProd,
+        cant;
+    float precio;
+    char descripcion[30];
+}t_dato;
+
+void crearLoteDatos (const char* nombArch);
+
+void crearLoteDatos (const char* nombArch)
+{
+    t_dato loteDatos[15] = {{83, 10, 99.8, "Prod 1"},
+                            {18, 8, 25.90, "Prod 2"},
+                            {25, 19, 9.8, "Prod 3"},
+                            {93, 1, 320.2, "Prod 4"},
+                            {40, 9, 44.4, "Prod 5"},
+                            {17, 10, 204.8, "Prod 6"},
+                            {21, 16, 949.8, "Prod 7"},
+                            {32, 30, 99.8, "Prod 8"},
+                            {74, 1, 99.8, "Prod 9"},
+                            {4, 10, 99.8, "Prod 10"},
+                            {83, 10, 99.8, "Prod 11"},
+                            {18, 8, 25.90, "Prod 12"},
+                            {25, 19, 9.8, "Prod 13"},
+                            {93, 1, 320.2, "Prod 14"},
+                            {40, 9, 44.4, "Prod 15"}};
+
+    FILE* pf = fopen(nombArch, "wb");
+    if(pf == NULL)
+    {
+        puts("No se pudo crear el archivo.");
+        return;
+    }
+    fwrite(&loteDatos, sizeof(t_dato),1,pf);
+    fclose(pf);
+}

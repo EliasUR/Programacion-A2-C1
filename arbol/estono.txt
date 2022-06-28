@@ -1,0 +1,27 @@
+float calculaPromedio(const tArbol *arbol)
+{
+    float acumulado=0;
+    unsigned contador=0;
+    sumarNodosYContar(arbol, &acumulado, &contador);
+    if(contador == 0)
+        return 0;
+    else
+        return acumulado / contador;
+}
+
+void sumarNodosYContar(const tArbol *arbol, float *acumulador, unsigned *contador)
+{
+    if(*arbol == NULL)
+        return;
+    else if((*arbol)->der == NULL && (*arbol)->izq == NULL)
+    {
+        *contador += 1;
+        *acumulador += *(int *)(*arbol)->info;
+        return;
+    }
+
+    sumarNodosYContar(&(*arbol)->izq, acumulador, contador);
+    sumarNodosYContar(&(*arbol)->der, acumulador, contador);
+    *contador += 1;
+    *acumulador += *(int *)(*arbol)->info;
+}

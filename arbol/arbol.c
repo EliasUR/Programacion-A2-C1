@@ -92,7 +92,7 @@ tNodo *buscarNodo(tArbol *arbol, void *dato, int (*comparar)(const void *a, cons
     if((*arbol)->mayor != NULL && comparar(dato, (*arbol)->info) > 0)
         return buscarNodo(&(*arbol)->mayor, dato, comparar);
 
-    if((*arbol)->mayor == NULL && (*arbol)->menor == NULL)
+//    if((*arbol)->mayor == NULL && (*arbol)->menor == NULL)
         return NULL;
 }
 
@@ -111,4 +111,18 @@ int ramaMax(tArbol *arbol)
 
     return nivelDerecha + nivelIzquierda;
 
+}
+
+float promedioArbolInt(tArbol *arbol){
+    if(*arbol == NULL){
+        return 0;
+    }
+    return (*(int *)(*arbol)->info + promedioArbolInt(&(*arbol)->menor) + promedioArbolInt(&(*arbol)->mayor)) / ((*arbol)->menor?((*arbol)->mayor?3:2):((*arbol)->mayor?2:1));
+}
+
+float promedioPreciso(tArbol *arbol){
+    int suma = 0;
+    float cant = 0;
+//    acum(arbol, &suma, &cant);
+    return cant > 0 ? suma/cant : 0;
 }
